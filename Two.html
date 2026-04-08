@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sqaures and Cubes</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        th {
+            background-color: rgb(124, 224, 221);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        td {
+            background-color: rgb(229, 242, 244);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sqaures and Cubes</h1>
+    <script>
+        document.write("<table>");
+        document.write("<tr><th>Number</th><th>Sqaure</th><th>Cube</th>");
+        for (let i = 0; i <= 10; i++) {
+            document.write("<tr><td>" + i + "</td><td>" + i * i + "</td><td>" + i * i * i + "</td>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+
+</html>
