@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="students.css"?>
+
+<college>
+    <student>
+        <usn>1SU21CS001</usn>
+        <name>Arjun Kumar</name>
+        <collegeName>Srinivas University</collegeName>
+        <branch>Computer Science</branch>
+        <yearOfJoining>2021</yearOfJoining>
+        <email>arjun.kumar@gmail.com</email>
+    </student>
+
+    <student>
+        <usn>1SU21CS002</usn>
+        <name>Neha Sharma</name>
+        <collegeName>Srinivas University</collegeName>
+        <branch>Information Science</branch>
+        <yearOfJoining>2021</yearOfJoining>
+        <email>neha.sharma@gmail.com</email>
+    </student>
+
+    <student>
+        <usn>1SU22CS003</usn>
+        <name>Rohan Shetty</name>
+        <collegeName>Srinivas University</collegeName>
+        <branch>Cyber Security</branch>
+        <yearOfJoining>2022</yearOfJoining>
+        <email>rohan.shetty@gmail.com</email>
+    </student>
+</college>
