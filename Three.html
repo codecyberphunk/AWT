@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Text Grow and Shrink</title>
+  </head>
+
+  <body>
+    <p id="text" style="font-size: 10pt; color: red">Text Growing</p>
+
+    <script>
+      let text = document.getElementById("text");
+      let size = 10;
+      let grow = true;
+
+      let timer = setInterval(function () {
+        if (grow) {
+          size = size + 2;
+          text.style.fontSize = size + "pt";
+
+          if (size >= 50) {
+            grow = false;
+            text.innerHTML = "Text Shrinking";
+            text.style.color = "blue";
+          }
+        } else {
+          size = size - 2;
+          text.style.fontSize = size + "pt";
+
+          if (size <= 5) {
+            clearInterval(timer);
+          }
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
