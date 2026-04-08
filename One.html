@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+
+    Number 1: <input type="number" id="num1"><br><br>
+    Number 2: <input type="number" id="num2"><br><br>
+
+    <button onclick="Sum()">SUM</button>
+    <button onclick="Mul()">Multiply</button>
+    <button onclick="Difference()">Difference</button>
+    <button onclick="Quotient()">Quotient</button>
+
+    <h3>Result: <span id="result"></span></h3>
+
+    <script>
+        function getValues() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            return { n1, n2 };
+        }
+
+        function Sum() {
+            let { n1, n2 } = getValues();
+            document.getElementById("result").innerHTML = n1 + n2;
+        }
+
+        function Mul() {
+            let { n1, n2 } = getValues();
+            document.getElementById("result").innerHTML = n1 * n2;
+        }
+
+        function Difference() {
+            let { n1, n2 } = getValues();
+            document.getElementById("result").innerHTML = n1 - n2;
+        }
+
+        function Quotient() {
+            let { n1, n2 } = getValues();
+            if (n2 === 0) {
+                document.getElementById("result").innerHTML = "Cannot divide by zero";
+            } else {
+                document.getElementById("result").innerHTML = n1 / n2;
+            }
+        }
+    </script>
+</body>
+</html>
