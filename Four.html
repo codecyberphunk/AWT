@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Functions</title>
+  </head>
+
+  <body>
+    <h3>Left-most Vowel Finder</h3>
+    <input type="text" id="text" />
+    <button onclick="findVowel()">Find Vowel</button>
+    <p id="result1"></p>
+
+    <hr />
+
+    <h3>Reverse Number</h3>
+    <input type="number" id="num" />
+    <button onclick="reverseNumber()">Reverse</button>
+    <p id="result2"></p>
+
+    <script>
+      function findVowel() {
+        let str = document.getElementById("text").value;
+        let vowels = "aeiouAEIOU";
+        let pos = -1;
+
+        for (let i = 0; i < str.length; i++) {
+          if (vowels.indexOf(str[i]) != -1) {
+            pos = i + 1;
+            break;
+          }
+        }
+
+        if (pos == -1)
+          document.getElementById("result1").innerHTML = "No vowel found";
+        else
+          document.getElementById("result1").innerHTML =
+            "Vowel at position: " + pos;
+      }
+
+      function reverseNumber() {
+        let num = document.getElementById("num").value;
+        let rev = num.split("").reverse().join("");
+        document.getElementById("result2").innerHTML =
+          "Reversed number: " + rev;
+      }
+    </script>
+  </body>
+</html>
